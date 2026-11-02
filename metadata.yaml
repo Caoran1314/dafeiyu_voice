@@ -1,0 +1,13 @@
+name: dafeiyu_voice
+display_name: 大肥鱼音色
+short_desc: GPT-SoVITS 本地克隆音色，只替换 TTS 这一步
+desc: 把回复的语音换成 GPT-SoVITS 本地克隆音色；只替换 TTS 这一步，人格、记忆、分条全部不动
+help: 装上后默认关闭。打开 enable 即可；换音色只需替换 ref_audio_root 下各情绪目录的 ref.wav 和 asr.txt
+version: 1.1.0
+author: Caoran1314
+category: AI 增强
+astrbot_version: ">=4.24.0"
+support_platforms:
+  - aiocqhttp
+  - webchat
+repo: https://github.com/Caoran1314/dafeiyu_voice

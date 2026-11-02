@@ -1,0 +1,57 @@
+{
+  "enable": {
+    "description": "启用本地音色",
+    "type": "bool",
+    "default": false,
+    "hint": "打开后，按下方概率把她的文字回复换成 GPT-SoVITS 合成的语音"
+  },
+  "prob": {
+    "description": "语音概率",
+    "type": "float",
+    "default": 0.25,
+    "hint": "0~1。0.25 表示大约四条回复里有一条会变成语音"
+  },
+  "api_base": {
+    "description": "GPT-SoVITS 服务地址",
+    "type": "string",
+    "default": "http://sovits:9880",
+    "hint": "compose 里服务名是 sovits；不在同一网络就填宿主地址"
+  },
+  "ref_audio_root": {
+    "description": "音色参考目录",
+    "type": "string",
+    "default": "/AstrBot/data/refaudio",
+    "hint": "下面每个子文件夹是一个情绪，里面放 ref.wav 和 asr.txt。换音色只改这里"
+  },
+  "text_lang": {
+    "description": "合成语言",
+    "type": "string",
+    "default": "zh"
+  },
+  "prompt_lang": {
+    "description": "参考文本语言",
+    "type": "string",
+    "default": "zh"
+  },
+  "prompt_text": {
+    "description": "参考文本兜底",
+    "type": "string",
+    "default": "",
+    "hint": "只有在 asr.txt 缺失时才会用这个"
+  },
+  "timeout_seconds": {
+    "description": "合成超时（秒）",
+    "type": "int",
+    "default": 120
+  },
+  "max_chars": {
+    "description": "超过这个字数就不转语音",
+    "type": "int",
+    "default": 120
+  },
+  "cache_dir": {
+    "description": "临时音频目录",
+    "type": "string",
+    "default": "/AstrBot/data/temp"
+  }
+}
